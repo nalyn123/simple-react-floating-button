@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/simple-react-floating-button/example/static/css/main.144dcf78.chunk.css",
+    "main.js": "/simple-react-floating-button/example/static/js/main.b31a6e43.chunk.js",
+    "main.js.map": "/simple-react-floating-button/example/static/js/main.b31a6e43.chunk.js.map",
+    "runtime-main.js": "/simple-react-floating-button/example/static/js/runtime-main.eda955af.js",
+    "runtime-main.js.map": "/simple-react-floating-button/example/static/js/runtime-main.eda955af.js.map",
+    "static/js/2.cd745c7e.chunk.js": "/simple-react-floating-button/example/static/js/2.cd745c7e.chunk.js",
+    "static/js/2.cd745c7e.chunk.js.map": "/simple-react-floating-button/example/static/js/2.cd745c7e.chunk.js.map",
+    "index.html": "/simple-react-floating-button/example/index.html",
+    "precache-manifest.f743bd85d07b4fe11aa39a9e060507ee.js": "/simple-react-floating-button/example/precache-manifest.f743bd85d07b4fe11aa39a9e060507ee.js",
+    "service-worker.js": "/simple-react-floating-button/example/service-worker.js",
+    "static/css/main.144dcf78.chunk.css.map": "/simple-react-floating-button/example/static/css/main.144dcf78.chunk.css.map",
+    "static/js/2.cd745c7e.chunk.js.LICENSE.txt": "/simple-react-floating-button/example/static/js/2.cd745c7e.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/simple-react-floating-button/example/static/media/soccer.58ea513f.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.eda955af.js",
+    "static/js/2.cd745c7e.chunk.js",
+    "static/css/main.144dcf78.chunk.css",
+    "static/js/main.b31a6e43.chunk.js"
+  ]
+}
