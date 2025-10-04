@@ -52,7 +52,7 @@ const App = () => {
   return (
     <>
       <div ref={ref1} className='section section-1'>
-        <h1>Floating Button Animation</h1>
+        <h1>Floating Button</h1>
         <p>(scroll to preview)</p>
       </div>
       <div
