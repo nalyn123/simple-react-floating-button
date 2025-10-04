@@ -1,4 +1,5 @@
 import React, { useLayoutEffect, useRef, useState, useEffect } from 'react'
+import { CommonUtils } from './utils/index'
 
 export const useFloatingModel = ({ buttons, sections }) => {
   const [sizes, setSizes] = useState([])
@@ -43,7 +44,7 @@ export const useFloatingModel = ({ buttons, sections }) => {
       newHeights.push({
         top,
         bottom,
-        theme: theme ?? getTheme(style.backgroundColor) ?? ''
+        theme: theme ?? CommonUtils.getTheme(style.backgroundColor) ?? ''
       })
     })
 
@@ -61,7 +62,12 @@ export const useFloatingModel = ({ buttons, sections }) => {
     const currentBottom = currentTop + height
 
     const allSizes = sizes.filter((size, index) =>
-      rangesOverlap(size.top, size.bottom, currentTop, currentBottom)
+      CommonUtils.rangesOverlap(
+        size.top,
+        size.bottom,
+        currentTop,
+        currentBottom
+      )
     )
 
     const newButtons = []
@@ -89,23 +95,6 @@ export const useFloatingModel = ({ buttons, sections }) => {
     })
 
     setButtons(newButtons)
-  }
-
-  const getTheme = (rgba) => {
-    const match = rgba.match(/\d+\.?\d*/g)
-    if (!match || match.length < 3) return false
-
-    const r = Number(match[0])
-    const g = Number(match[1])
-    const b = Number(match[2])
-
-    const brightness = 0.299 * r + 0.587 * g + 0.114 * b
-
-    return brightness < 128 ? 'dark' : 'light'
-  }
-
-  const rangesOverlap = (start1, end1, start2, end2) => {
-    return start1 <= end2 && start2 <= end1
   }
 
   return { mainRef, ref, renderButtons }

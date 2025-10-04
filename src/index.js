@@ -13,6 +13,20 @@ const FloatingButton = ({
     sections
   })
 
+  const Button = ({ button }) => (
+    <div
+      className={`floating-button__btn-${button?.theme}`}
+      style={button?.style?.wrap}
+    >
+      <button
+        className={`btn btn-${button?.theme} ${buttonClassName}`}
+        style={button?.style?.btn}
+      >
+        {button?.button}
+      </button>
+    </div>
+  )
+
   return (
     <div ref={mainRef} className={`floating-button ${className || ''}`}>
       <div ref={ref} className={`floating-button__btn-default`}>
@@ -22,18 +36,7 @@ const FloatingButton = ({
       </div>
 
       {renderButtons.map((button, index) => (
-        <div
-          className={`floating-button__btn-${button?.theme}`}
-          key={index}
-          style={button?.style?.wrap}
-        >
-          <button
-            className={`btn btn-${button?.theme} ${buttonClassName}`}
-            style={button?.style?.btn}
-          >
-            {button?.button}
-          </button>
-        </div>
+        <Button button={button} key={index} />
       ))}
     </div>
   )
