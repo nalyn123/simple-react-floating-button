@@ -3,7 +3,7 @@
 ## Install
 
 ```bash
-npm install --save simple-react-carousel
+npm install --save simple-react-floating-button
 ```
 
 ## Create build for development mode
