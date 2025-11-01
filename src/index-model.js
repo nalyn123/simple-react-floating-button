@@ -22,7 +22,12 @@ export const useFloatingModel = ({ buttons, sections }) => {
 
   useEffect(() => {
     window.addEventListener('scroll', createButtons)
-    window.addEventListener('load', createButtons)
+
+    if (document.readyState === 'complete') {
+      createButtons()
+    } else {
+      window.addEventListener('load', createButtons)
+    }
 
     return () => {
       window.removeEventListener('scroll', createButtons)
